@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Courage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/portfolio/img/logo.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="my_story.html">My Story</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="/portfolio/CV_HTML.html" target="_blank">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <ul class="socials">
+                <li><a href="https://www.youtube.com" target="_blank"><img src="/portfolio/img/linkedin_white.svg" alt=""></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><img src="/portfolio/img/github_white.svg" alt=""></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><img src="/portfolio/img/behance_white.svg" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="infoContainer">
+                <div class="devInfo">
+                    <div class="hello">Hi, I am </div>
+                    <div class="name">Courage</div>
+                    <div class="about">I am a loyal beagle but incredibly timid and I know I'm not gonna like this but
+                        Muriel,
+                        I'll save you!
+                    </div>
+                    <div class="profession">
+                        I am a passionate Software Engineer having an experience of building Web and Mobile Applications with HTML / CSS / JS / Python / Dart and other cool libraies and frameworks.  
+                    </div>
+
+                    <div class="tab_titles">
+                        <p class="tab_links active_link" onclick= "opentab('skills')" >Skills</p>
+                        <p class="tab_links" onclick= "opentab('experience')" >Experience</p>
+                        <p class="tab_links" onclick= "opentab('education')" >Education</p>
+                    </div>
+
+                    <div class="tab_contents active_tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span> <br> Desigining Websites</li>
+                            <li><span>App Development</span> <br> Creating Android, IoS & Web Applications</li>
+                            <li><span>UI/UX</span> <br> Desigining Responsive Web User Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span> <br> Cross Platform App Developer at Bank SA Australia</li>
+                            <li><span>2020 - Current</span> <br> UX Researcher at Bank SA Australia</li>
+                            <li><span>2019 - 2020</span> <br> Responsive Website UI Designer at Bank SA Australia</li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="education">
+                        <ul>
+                            <li><span>B.SC.</span> <br> in Computer Science & Engineering</li>
+                            <li><span>HSC </span> <br> Birshreshtha Noor Mohammad Public College</li>
+                            <li><span>SSC</span> <br> Birshreshtha Munshi Abdur Rouf Public College</li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="tab_contents" id="projects">
+                        <ul>
+                            <li><span>projects</span> <br> in Computer Science & Engineering</li>
+                            <li><span>HSC </span> <br> Birshreshtha Noor Mohammad Public College</li>
+                            <li><span>SSC</span> <br> Birshreshtha Munshi Abdur Rouf Public College</li>
+                        </ul>
+                    </div> -->
+
+                    <div class="buttons">
+                        <button> <a href="/portfolio/CV_HTML.html" target="_blank"> Download CV</a></button>
+                        <button> <a href="/portfolio/contact.html" target="_blank">Contact Me</a></button>
+                    </div>
+                </div>
+                <div class="devPic">
+                    <img src="/portfolio/img/Courage_happy.png" alt="i know something bad is going to happen">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab_links");
+        var tabcontents = document.getElementsByClassName("tab_contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active_link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active_tab");
+            }
+
+            event.currentTarget.classList.add("active_link");
+            document.getElementById(tabname).classList.add("active_tab");
+        }
+    </script>
+</body>
+
+</html>
